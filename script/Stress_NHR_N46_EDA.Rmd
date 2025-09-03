@@ -232,7 +232,7 @@ df_sedentAct <- df_validDates %>%
 ```{r PsychDataReading, include=FALSE}
 # Read the psychometric data and drop the unnecessary columns based on ID and Date.
 
-fileName = "Exp_NASA_Sleep_Rec_N48_Team.csv" # Team N48
+fileName = "Exp_NASA_Sleep_Rec_N46_Team.csv" # Team N48
 df_rawPsych = read.csv(paste0(data_dir, fileName), stringsAsFactors = T)
 
 # Remove T031 from the data
