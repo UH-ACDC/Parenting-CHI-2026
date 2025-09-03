@@ -630,7 +630,7 @@ m.plot.main3 <- sjPlot::plot_model(stress_logit_model,
 m.plot.main4 <- sjPlot::plot_model(stress_logit_model,
                    type = "pred",
                    terms = c("N_MD[all]"),
-                   colors = "black") +
+                   colors = "red") +
                    theme_bw() +
                    theme(axis.text = element_text(size = 10),
                          panel.grid.major = element_blank(), 
@@ -795,7 +795,7 @@ m.plot.main_act <- ggpredict(stress_logit_model_s,
 m.plot.main_nmd <- ggpredict(stress_logit_model_s, "s_N_MD[all]") %>%
     ggplot(aes(x, predicted)) +
     geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = .2) +
-    geom_line(colour = "black", size = 2) +
+    geom_line(colour = "red", size = 2) +
     geom_vline(
      xintercept = mean(df_sedentMultimodal$Ps_N_MD),
      linetype = "dashed",
